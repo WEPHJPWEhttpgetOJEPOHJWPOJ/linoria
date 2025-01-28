@@ -1393,9 +1393,6 @@ do
             Groupbox:Resize();
         end
 
-        if (not DoesWrap) then
-            setmetatable(Label, BaseAddons);
-        end
 
         Groupbox:AddBlank(5);
         Groupbox:Resize();
@@ -1943,7 +1940,6 @@ do
 
         Toggle.TextLabel = ToggleLabel;
         Toggle.Container = Container;
-        setmetatable(Toggle, BaseAddons);
 
         Toggles[Idx] = Toggle;
 
@@ -2665,7 +2661,6 @@ do
 
         Depbox.Container = Frame;
 
-        setmetatable(Depbox, BaseGroupbox);
 
         table.insert(Library.DependencyBoxes, Depbox);
 
@@ -3262,7 +3257,6 @@ function Library:CreateWindow(...)
             end;
 
             Groupbox.Container = Container;
-            setmetatable(Groupbox, BaseGroupbox);
 
             Groupbox:AddBlank(3);
             Groupbox:Resize();
@@ -3452,8 +3446,6 @@ function Library:CreateWindow(...)
 
                 Tab.Container = Container;
                 Tabbox.Tabs[Name] = Tab;
-
-                setmetatable(Tab, BaseGroupbox);
 
                 Tab:AddBlank(3);
                 Tab:Resize();
